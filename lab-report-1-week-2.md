@@ -1,7 +1,7 @@
 # CSE 15L Lab 2 
-Charvi Shukla 
+> Charvi Shukla 
 
-cshukla@ucsd.edu
+>cshukla@ucsd.edu
 
 ## Installing Vscode
 _This tutorial assumes that you have a java (13 or newer) already installed on your machine._
@@ -42,7 +42,8 @@ Step 10: Open terminal and type
 
 `$ java HelloWorld `
 
-## Troubleshooting
+**Troubleshooting**
+
  If your mac not let you open the file since you downloaded it from the internet, you would need to allow the .dmg file to be able to open. To troubleshoot this problem, do the following:
 
 1. Go on System Preferences. 
@@ -50,4 +51,26 @@ Step 10: Open terminal and type
 3. Click the little lock symbol at the bottom and enter your mac password. 
 4. Allow downloads from "App store and identified developers"
 5. Try opening the file 
+
+## Remotely Connecting 
+**Step 1:** Open Terminal 
+
+**Step 2:** make sure you are in your home directory 
+
+**Step 3:** Type out the following command in the terminal 
+`$ <your account name>@ieng6.ucsd.edu `
+
+**Step 4:** Enter your password (if you have one) 
+
+**Step 5:** Hit enter. You should be able to see something like this:
+
+![Image](Remotely_connecting_screenshot1.png)
+
+You are now conneced remotely!
+
+## Trying some commands
+
+## Moving Files with SCP 
+
+## Setting the `SSH` key 
 
