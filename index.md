@@ -10,7 +10,6 @@
 * stop procrastinating 
 * work on the Lab report 
 * get coffee 
-horizontal rule:
 ---
 ## Numbered bullets tester
 1. idk 
