@@ -23,4 +23,7 @@ System.out.println(hello world)
 ```
 lol
 
+> puppies are **so** _cute_ 
 
+## Here is a Fat Corgi: 
+![Image](https://i.chzbgr.com/full/7456124672/h29BC1902/are-you-trying-to-tell-me-something)
