@@ -1,12 +1,26 @@
-# CSE 15L Lab 2 
+# CSE 15L Lab 1 
 > Charvi Shukla 
 
 >cshukla@ucsd.edu
 
+## Introduction 
+
+Hello there! Welcome to my Lab report 1 for CSE 15L. This page contains tutorials on:
+* Installing VS code
+* Remotely Connecting 
+* Trying Some Commands
+* Moving Files with scp
+* Setting an SSH Key
+* Optimizing Remote Running
+
+
 ## Installing Vscode
 _This tutorial assumes that you have a java (13 or newer) already installed on your machine._
 
-**Step 1:** Go on this link and click the Mac Download button 
+**Step 1:** Go on this [link](https://code.visualstudio.com/download) and click the Mac Download button 
+
+![Image](VS_code_setup1.png)
+
 
 **Step 2:** Open the file and keep following the instructions that the system prompts.
 
@@ -69,8 +83,36 @@ Step 10: Open terminal and type
 You are now conneced remotely!
 
 ## Trying some commands
+__cd__: change directory 
+
+This command changes the directory from the one you are in to a different one so that you can execute other commands on a different directory and perform various functions such as viewing the contents of a different directory or opening a file in a different directory
+
+__ls__: list files 
+
+This command enables you to see all the files or directories contained in the directory you are currently in. 
+
+__pwd__: print working directory 
+
+This command gives you your current exact location on the computer
+
+__mkdir__: make directory 
+
+This command allows the user to create a directory (or in other words, a folder) in the directory you are currently in. 
+
+__rm__: remove
+
+Remove or rm is a prefix that you can use with other terms to delete a file or even a whole directory. This is an irreversible command.
+
+__touch__: create a file
+
+Touch can essentially allow you to make _any_ type of file, but it is initially empty. This blank file can then be opened in a tet editor. 
+
+__man__: display command manual 
+
+![Touch](Lab_commands_screenshot.png)
 
 ## Moving Files with SCP 
+
 
 ## Setting the `SSH` key 
 
