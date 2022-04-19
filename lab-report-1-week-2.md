@@ -228,6 +228,20 @@ Everytime you log in to `ssh` you should no longer require a passcode! Here is w
 
 ![Image](keygen_ss2.png)
 
+**Step 8**
+
+Let's try and see how much time this saves us!
+
+* Open terminal 
+* Type `ssh <your account name>@ieng6.ucsd.edu`
+* Hit enter 
+
+Your terminal screen should look similar. 
+
+![Image](remotely_saving_time.png)
+
+The point of using keygen was to save valuable developer time. You can now log into the remote server with less than 5 clicks! 
+
 
 ## Conclusion
 
