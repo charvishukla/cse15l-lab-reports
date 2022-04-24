@@ -24,20 +24,22 @@ Click [here](https://github.com/charvishukla/markdown-parser-lab2/commit/2880d40
 
 ## Link to the test file for a _failure-inducing input_
 
-This [testfile](https://github.com/charvishukla/markdown-parser-lab2/blob/main/fail1.md) is an example of a failiure inducing input. The file is empty, and (before we made these changes) would cause the following error:
+This [testfile](https://github.com/charvishukla/markdown-parser-lab2/blob/main/empty_file.md) is an example of a failiure inducing input. This file, called `empty_file.md` does not have any contents, which causes errors while compiling the original version of `MarkdownParse.java`.
 
---> insert img !!!!!!1
+In order to fix this problem we added the following lines of code to the file:
 
-Therefore, to fix this problem we added the following lines of code to the file:
-
-`` if(markdown.length() == 0){
+```
+if(markdown.length() == 0){
     return(null);
-}``
+}
+```
 
-This can ve seen in lines 14, 15, and 16 in the code change screenshot above. 
+This change can be seen in lines 14, 15, and 16 in the code change screenshot above. 
 
 ## The symptom of that _failure-inducing input_
 
-Here is what I see when I run MarkdownParse.java 
+Here is what I see when I run `MarkdownParse.java` with the test file `fail1.md`:
+
+---> insert image 
 
 ## The **bug**, the **symptom**, and the **failiure-inducing output**
