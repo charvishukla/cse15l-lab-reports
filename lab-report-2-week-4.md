@@ -47,7 +47,9 @@ A `StringIndexOutOfBoundsException` happens when the code tries to access either
 The bug in this scenario is the missing code that account for empty files. When a _failiure-inducing input_, i.e. an empty .md file is used, the symptom is seen. Here, the symptom is a `StringIndexOutOfBoundsException` being thrown. 
 
 ## Correct Code Output 
+Here is a screenshot of the code returning the correct output!
 
+![Image](correct.png)
 
 ## Conclusion 
 This conculdes my lab report #2. Thank you for reading! 
