@@ -20,19 +20,16 @@ Click [here](https://github.com/charvishukla/markdown-parser/commit/2880d4036127
 
 ## Link to the test file for a _failure-inducing input
 
+**Defining a failiure inducing input**
 A **failiure-inducing input** is an input to the program that allows buggy code to execute, leading to symptoms. Symptoms are essentially wrong outputs or situations where the code crashes. 
 
+**Failiure inducing input 1**
 This [testfile](https://github.com/charvishukla/markdown-parser/blob/main/fail1.md) is an example of a failiure inducing input. The file, called `fail1.md` does not have any contents. This causes errors while running with the original version of `MarkdownParse.java`.
 
-In order to fix this problem we added the following lines of code to the file:
+**Failiure inducing input 2**
 
-```
-if(markdown.length() == 0){
-    return(null);
-}
-```
+**Failiure inducing input 3**
 
-This change can be seen in lines 14, 15, and 16 in the code change screenshot above. 
 
 ## The symptom of that _failure-inducing input_
 
