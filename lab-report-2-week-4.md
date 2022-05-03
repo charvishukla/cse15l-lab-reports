@@ -89,13 +89,16 @@ The bug in this scenario is the missing code that account for missing parenthesi
 Here is a screenshot of the code returning the correct output for all these inputs!
 
 
-`fail1.md` correct output
+**`fail1.md` correct output**
+
 ![Image](correct.png)
 
-`fail2.md` correct output 
+**`fail2.md` correct output**
+
 ![Image](correct2.png)
 
-`fail3.md` correct output
+**`fail3.md` correct output**
+
 ![Image](correct3.png)
 
 
