@@ -20,7 +20,7 @@ Click [here](https://github.com/charvishukla/markdown-parser/commit/2880d4036127
 
 ## Link to the test file for a _failure-inducing input
 
-**Defining a failiure inducing input**
+**Defining a failure inducing input**
 
 Let's first define what a failiure-inducing input actually is. A **failiure-inducing input** is an input to the program that allows buggy code to execute, leading to symptoms. Symptoms are essentially wrong outputs or situations where the code crashes. 
 
@@ -28,11 +28,11 @@ Let's first define what a failiure-inducing input actually is. A **failiure-indu
 
 This testfile, called [fail1.md](https://github.com/charvishukla/markdown-parser/blob/main/fail1.md) is an example of a failiure inducing input. The file, called `fail1.md` does not have any contents. This causes errors while running with the original version of `MarkdownParse.java`.
 
-**Failiure inducing input 2**
+**Failure inducing input 2**
 
 This testfile, called [fail2.md](https://github.com/charvishukla/markdown-parser/blob/main/fail2.md) is an example of a failiure inducing input. It contains an extra paragraph in addition to the links, which causes errors when running with the original version of `MarkdownParse.java`.
 
-**Failiure inducing input 3**
+**Failure inducing input 3**
 
 This testfile, called [fail3.md](https://github.com/charvishukla/markdown-parser/blob/main/fail3.md) is an example of a failiure inducing input. The last link in that md file does not end with a closing parenthesis. This is not accounted for in the original version of `MarkdownParse.java`, causing errors. 
 
@@ -42,7 +42,7 @@ This testfile, called [fail3.md](https://github.com/charvishukla/markdown-parser
 
 Let us first define what "symptom of a failiure-inducing input" actually means.
 
-**Symptopm for failiure inducing input1**
+**Symptopm for failure inducing input1**
 
 The failure-inducing input here is the testfile called [fail1.md](https://github.com/charvishukla/markdown-parser/blob/main/fail1.md). It causes a `StringIndexOutOfBoundsException` which looks as following in the terminal:
 
@@ -51,7 +51,7 @@ The failure-inducing input here is the testfile called [fail1.md](https://github
 A `StringIndexOutOfBoundsException` happens when the code tries to access either a negative or an index bigger than the length of the string. 
 
 
-**Symptopm for failiure inducing input1**
+**Symptopm for failure inducing input1**
 
 The failiure inducing input here is [fail2.md](https://github.com/charvishukla/markdown-parser/blob/main/fail2.md). This causes a `java.lang.OutOfMemoryError: Java heap space` error. This happens because the extra paragraph occurs before the links and does not contain any brackets or parenthesis. The algorithm orginally does not contain any means to account for such a situation leading to the error.
 
@@ -59,7 +59,7 @@ The failiure inducing input here is [fail2.md](https://github.com/charvishukla/m
 
 Ususally a `java.lang.OutOfMemoryError: Java heap space` error-message is thrown when there is insufficient space to allocate an object in the Java heap.
 
-**Symptopm for failiure inducing input1**
+**Symptopm for failure inducing input1**
 
 Thhe failiure inducing input here is [fail3.md](https://github.com/charvishukla/markdown-parser/blob/main/fail3.md). There is an `IndexOutOfBounds` exception because the input file does not have a closing parenthesis for one of the links. The error message looks like this:
 
