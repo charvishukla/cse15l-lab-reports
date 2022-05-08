@@ -11,7 +11,7 @@ In this lab report I will be going over the following:
 * Setting up Github Access from ieng6
 * Copying whole directories with scp -r
 
-## Task 1: Streamlining `ssh` Configuration 
+## **Task 1: Streamlining `ssh` Configuration**
 
 **Step 1**
 
@@ -43,7 +43,7 @@ Here is what that looks like:
 ![Image](fileToMove.png)
 
 
-## Task 2: Setup Github Access from ieng6
+## **Task 2: Setup Github Access from ieng6**
 
 **Step 1: Creating keys using keygen**
 
@@ -104,7 +104,7 @@ Pushing changes from `Skill-Dem` to GitHub (P.S.: This is not my actual Skill De
 ![Image](ieng_push_changes.png)
 
 
-## Task 2: Copying whole directories with scp -r
+## **Task 3: Copying whole directories with scp -r**
 
 Instead of copying each file in a directory one by one, using `scp -r` enables the user to be able to copy the entire directory at a time. 
 
