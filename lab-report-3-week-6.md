@@ -110,3 +110,27 @@ Instead of copying each file in a directory one by one, using `scp -r` enables t
 
 For this lab report, i will be copying over `markdown_parse_2` to `ieng6` using the following command. 
 
+**Step 1: Copying files**
+
+I used the following command to copy the directory over:
+
+`$ scp -r . ieng6:~/markdown_parser_2`
+
+![Image](copying.png)
+
+**Step 2: Running the tester file**
+
+In order to run the tests, I first compiled the test file using:
+
+`javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java`
+
+And then, I ran the test file using:
+
+`java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+
+All the tests passed, and the terminal looked like this:
+
+![Image](test_ran.png)
+
+**Step 3: combining scp, ;, and ssh to copy the whole directory and run the tests in one line**
+
