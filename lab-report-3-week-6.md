@@ -134,3 +134,17 @@ All the tests passed, and the terminal looked like this:
 
 **Step 3: combining scp, ;, and ssh to copy the whole directory and run the tests in one line**
 
+Before starting on this part of the lab report, i deleted the existing `markdown_parser_2` version on `ieng6` using `rm -r markdown_parser_2`. 
+
+To combine copying and running files into a single command i used the following command on the terminal:
+
+`scp -r . ieng6:~/markdown_parser_2; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+
+Here are screenshots of the output:
+
+![Image](res1.png)
+![Image](res2.png)
+
+
+## **Conclusion**
+This concludes my Lab report 3. Thank you for reading!
