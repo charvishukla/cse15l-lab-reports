@@ -104,5 +104,9 @@ Pushing changes from `Skill-Dem` to GitHub (P.S.: This is not my actual Skill De
 ![Image](ieng_push_changes.png)
 
 
+## Task 2: Copying whole directories with scp -r
 
+Instead of copying each file in a directory one by one, using `scp -r` enables the user to be able to copy the entire directory at a time. 
+
+For this lab report, i will be copying over `markdown_parse_2` to `ieng6` using the following command. 
 
