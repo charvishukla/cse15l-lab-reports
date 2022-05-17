@@ -113,27 +113,24 @@ Generating keys and copying the public key:
 ![Image](generating_keys2.png)
 
 
-**Using git commands while logged into ieng6**
+> **STEP 7: Using git commands while logged into ieng6**
 
 **Step 1:** I first created a new repository called `Lab_report3`
 
 ![Image](created_rep.png)
 
-**Step 2:** Then i used the `touch` command to make a random markdown file in that repository. 
+**Step 2:** Then i used the `touch` command to make a random markdown file in that repository. Then I used the `git add` and `git commit m-` commands to stage and commit the markdown file. 
 
-![Image](created_randomfile.png)
+![Image](final_add.png)
 
-**Step 3:** Then I used the `git add` and `git commit m-` commands to stage and commit the markdown file. 
-
-![Image](git_add_commit.png)
 
 **Step 4:** I finally pushed the changes to github. To do so, I had to create a gpg authentication key. Here is the screenshot of pushing
 
-![Image](git_push.png)
+![Image](final.png)
 
 **Step 5:** commit link:
 
-> [link](https://github.com/charvishukla/Lab_report3/commit/be3966be48516a892285299ff2f7319deb2b9994)
+> [link](https://github.com/charvishukla/Lab_report3/commit/63373eb797f57cbbf49ee7af9778b2e7e1c9a7a4)
 
 ## **Task 3: Copying whole directories with scp -r**
 
