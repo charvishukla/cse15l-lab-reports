@@ -68,6 +68,17 @@ I added the GitHub information to my `config` file as well, in order to save tim
 
 ![Image](config_save.png)
 
+**Step 4: PUBLIC KEY LOCATIONS**
+
+On GitHub: 
+
+![Image](keys_on_github.png)
+
+
+On my device:
+
+![Image](key_on_mydevice.png)
+
 **Step 4: Using Git commands**
 
 In the next step, I made small edits to `markdown-parser.java`. Then, via the terminal, I staged the changes with the following command:
@@ -87,6 +98,8 @@ And, finally, I pushed the changes to GitHub:
 
 Yay! The changes have now been pushed! click [here](https://github.com/charvishukla/markdown-parser/commit/853e62b8fb9e4820306a957c9fadda9e8c287606) to view the commit link. 
 
+> **Link to the commit:** [link](https://github.com/charvishukla/markdown-parser/commit/853e62b8fb9e4820306a957c9fadda9e8c287606)
+
 Here is also a screenshot of the commit page:
 
 ![Image](commit_page_ss.png)
@@ -99,10 +112,28 @@ Generating keys and copying the public key:
 
 ![Image](generating_keys2.png)
 
-Pushing changes from `Skill-Dem` to GitHub (P.S.: This is not my actual Skill Demonstration, just a failed version)
 
-![Image](ieng_push_changes.png)
+**Using git commands while logged into ieng6**
 
+**Step 1:** I first created a new repository called `Lab_report3`
+
+![Image](created_rep.png)
+
+**Step 2:** Then i used the `touch` command to make a random markdown file in that repository. 
+
+![Image](created_randomfile.png)
+
+**Step 3:** Then I used the `git add` and `git commit m-` commands to stage and commit the markdown file. 
+
+![Image](git_add_commit.png)
+
+**Step 4:** I finally pushed the changes to github. To do so, I had to create a gpg authentication key. Here is the screenshot of pushing
+
+![Image](git_push.png)
+
+**Step 5:** commit link:
+
+> [link](https://github.com/charvishukla/Lab_report3/commit/be3966be48516a892285299ff2f7319deb2b9994)
 
 ## **Task 3: Copying whole directories with scp -r**
 
@@ -136,15 +167,27 @@ All the tests passed, and the terminal looked like this:
 
 Before starting on this part of the lab report, i deleted the existing `markdown_parser_2` version on `ieng6` using `rm -r markdown_parser_2`. 
 
-To combine copying, going into `ieng6` and running files into a single command i used the following command on the terminal:
+**To combine copying, going into `ieng6` and running files into a single command, the following components need to be appended using a semicolon (;)**
+
+1. _Location of `markdown_parser_2` on my computer:_ /Users/charvieshukla/documents/GitHub/markdown_parser_2
+
+2. _Location of `markdown_parser_2` on the remote server:_ ieng6:~/markdown_parser_2; ssh ieng6 cd markdown_parser_2; 
+
+3. _Compiling the test file_:  javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java;
+
+4. _Running the test file_:  java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+
+
+**Therefore, I used the following command on the terminal:**
 
 `scp -r  /Users/charvieshukla/documents/GitHub/markdown_parser_2 ieng6:~/markdown_parser_2; ssh ieng6 cd markdown_parser_2; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+
+
+Here are screenshots of the command and the output:
 
 ![Image](finalres1.png)
 
 ![Image](finalres2.png)
-
-Here are screenshots of the output:
 
 
 
