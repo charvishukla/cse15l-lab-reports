@@ -115,16 +115,72 @@ Compiling: `javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownP
 
 Running: `java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
 
-Running Screenshot:
+**CORRESPONDING TEST RESULT:**
+
+---> All the tests failed
 
 ![Image](all_tests_failing.png)
+
+**WHERE DID THE TEST FAILIURES OCCUR:**
+
+Note: In the code snippets below i have used ". . ." to exclude extra output and only include the relevant parts of the JUnit error message, which would help us find the location of the bug. 
+
+For the test that contains `snippet1.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 65 of `MarkdownParse.java` which probably caused this error:
+
+```
+1) testGetLinksFile6(MarkdownParseTest)
+java.lang.AssertionError: expected:<[google.com]> but was:<[url.com, `google.com, google.com, ucsd.edu]>
+        at org.junit.Assert.fail(Assert.java:89)
+        . . . 
+
+        at MarkdownParseTest.testGetLinksFile6(MarkdownParseTest.java:65)
+```
+
+For the test that contains `snippet2.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 77 of `MarkdownParse.java` which probably caused this error:
+
+```
+2) testGetLinksFile7(MarkdownParseTest)
+java.lang.AssertionError: expected:<[a.com, a.com, example.com]> but was:<[a.com, a.com((, example.com]>
+        at org.junit.Assert.fail(Assert.java:89)
+        . . . 
+        at MarkdownParseTest.testGetLinksFile7(MarkdownParseTest.java:77)
+```
+
+For the test that contains `snippet3.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line  87 of `MarkdownParse.java` which probably caused this error:
+
+```
+3) testGetLinksFile8(MarkdownParseTest)
+java.lang.AssertionError: expected:<[https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule]> but was:<[
+    https://www.twitter.com
+, 
+https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule
+, github.com
+
+. . . 
+
+]>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at MarkdownParseTest.testGetLinksFile8(MarkdownParseTest.java:87)
+```
 
 ## ADDING TESTS TO THE REVIEWED REPOSITORY 
 
 Cloning the repository:
+
+First, I cloned the repository that we reviewed in Lab 7 to my computer. Then, I added the required code snippets to individual .md files in order to run the tests. 
 
 Test 1 screenshot:
 
 Test 2 screenshot:
 
 Test 3 screenshot: 
+
+Running the tests:
+
+Error messages:
+
+
+## ADDITIONAL QUESTIONS 
