@@ -91,16 +91,33 @@ Here, the expected output should include the follwing link: [https://sites.googl
 
 Now that I have figured out what the expected values would be, I can go ahead and write tests in my version of markdown parse:
 
+I created 3 new .md files: `snippet1.md`, `snippet2.md`, and `snippet3.md` in my MarkdownParser repository. 
+
+I then wrote the following tests:
+
 Test 1 screenshot:
+
+![Image](test1.png)
 
 Test 2 screenshot:
 
-Test 3 screenshot: 
+![Image](test2.png)
 
-Pulling changes on `ieng6`: 
+Test 3 screenshot: 
+![Image](test3.png)
 
 Running the tests:
+To run these tests, I used the following commands on terminal:
 
+Compiling: `javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java`
+
+
+
+Running: `java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+
+Running Screenshot:
+
+![Image](all_tests_failing.png)
 
 ## ADDING TESTS TO THE REVIEWED REPOSITORY 
 
