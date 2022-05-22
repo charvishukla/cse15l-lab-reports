@@ -125,7 +125,9 @@ Running: `java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.ru
 
 Note: In the code snippets below i have used ". . ." to exclude extra output and only include the relevant parts of the JUnit error message, which would help us find the location of the bug. 
 
-For the test that contains `snippet1.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 65 of `MarkdownParse.java` which probably caused this error:
+**Test 1**
+
+For the test that contains `snippet1.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 65 of `MarkdownParseTest.java` which probably caused this error:
 
 ```
 1) testGetLinksFile6(MarkdownParseTest)
@@ -136,7 +138,9 @@ java.lang.AssertionError: expected:<[google.com]> but was:<[url.com, `google.com
         at MarkdownParseTest.testGetLinksFile6(MarkdownParseTest.java:65)
 ```
 
-For the test that contains `snippet2.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 77 of `MarkdownParse.java` which probably caused this error:
+**Test 2**
+
+For the test that contains `snippet2.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 77 of `MarkdownParseTest.java` which probably caused this error:
 
 ```
 2) testGetLinksFile7(MarkdownParseTest)
@@ -146,7 +150,9 @@ java.lang.AssertionError: expected:<[a.com, a.com, example.com]> but was:<[a.com
         at MarkdownParseTest.testGetLinksFile7(MarkdownParseTest.java:77)
 ```
 
-For the test that contains `snippet3.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line  87 of `MarkdownParse.java` which probably caused this error:
+**Test 3**
+
+For the test that contains `snippet3.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line  87 of `MarkdownParseTest.java` which probably caused this error:
 
 ```
 3) testGetLinksFile8(MarkdownParseTest)
@@ -170,17 +176,91 @@ https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule
 
 Cloning the repository:
 
-First, I cloned the repository that we reviewed in Lab 7 to my computer. Then, I added the required code snippets to individual .md files in order to run the tests. 
+First, I cloned the repository that we reviewed in Lab 7 to my computer. I saved it as a directory called `MarkdownParser_Review`. Then, I added the required code snippets to individual .md files in order to run the tests. 
 
 Test 1 screenshot:
 
+![Image](test1_review.png)
+
+
 Test 2 screenshot:
+
+![Image](test2_review.png)
 
 Test 3 screenshot: 
 
-Running the tests:
+![Image](test3_review.png)
 
-Error messages:
+**CORRESPONDING TEST RESULT:**
 
+To run these tests, I used the following commands on terminal:
+
+Compiling: `javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java`
+
+Running: `java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+
+![Image](review_test_result.png)
+
+As you can see above, all the tests failed. 
+
+**WHERE DID THE TEST FAILIURES OCCUR:**
+
+Note: In the code snippets below i have used ". . ." to exclude extra output and only include the relevant parts of the JUnit error message, which would help us find the location of the bug. 
+
+**Test 1**
+
+For the test that contains `Snippet1.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 128 of `MarkdownParseTest.java` which probably caused this error:
+
+```
+1) testSnippet1(MarkdownParseTest)
+java.lang.AssertionError: expected:<[url.com, `google.com, google.com]> but was:<[`google.com]>
+        at org.junit.Assert.fail(Assert.java:89)
+     	. . . 
+        at MarkdownParseTest.testSnippet1(MarkdownParseTest.java:128)
+```
+
+**Test 2**
+
+For the test that contains `Snippet2.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 142 of `MarkdownParseTest.java` which probably caused this error:
+
+```
+2) testSnippet2(MarkdownParseTest)
+java.lang.AssertionError: expected:<[a.com, a.com((]> but was:<[a.com, a.com(()), example.com]>
+        at org.junit.Assert.fail(Assert.java:89)
+        . . .
+        at MarkdownParseTest.testSnippet2(MarkdownParseTest.java:142)
+```
+
+**Test 3**
+
+For the test that contains `Snippet3.md`, the JUnit test result tells us 2 main things: (1) there was a JUnit assertion error on line 89 since expected and actual do not match, (2) there was an error in line 154 of `MarkdownParseTest.java` which probably caused this error:
+
+```
+3) testSnippet3(MarkdownParseTest)
+java.lang.AssertionError: expected:<[
+https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule
+, https://cse.ucsd.edu/
+]> but was:<[https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule]>
+        at org.junit.Assert.fail(Assert.java:89)
+        . . . 
+        at MarkdownParseTest.testSnippet3(MarkdownParseTest.java:154)
+
+```
 
 ## ADDITIONAL QUESTIONS 
+
+**Question 1**
+**Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.**
+
+
+
+**Question 2**
+**Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.**
+
+
+
+**Question 3**
+**Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.**
+
+
+
