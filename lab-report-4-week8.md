@@ -263,3 +263,7 @@ No, a small code change would not suffice in this case. To account for nested lo
 **Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.**
 
 No, this would also require a more involved change. We can write a boolean helper method to see if for a given line we have all the open and closed parenthesis or not. Then in an if satement, we can include a possibility that the line does not contain all these open/closed brackets and parenthesis. This if statement would then append the current line with the next line so that the formatting is fixed. Then, we can just use our original method to read between the given symbols to extract the link. Since this involves multiple lines [inlculing a whole new helper method], this would be a more involved change. 
+
+
+## CONCLUSION 
+Thank you for reading! :)
