@@ -252,7 +252,7 @@ https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule
 **Question 1**
 **Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.**
 
-
+An if statement could be added to the code which would traverse through a line and check if there are any back
 
 **Question 2**
 **Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.**
