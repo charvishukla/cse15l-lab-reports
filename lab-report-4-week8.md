@@ -252,15 +252,14 @@ https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule
 **Question 1**
 **Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.**
 
-An if statement could be added to the code which would traverse through a line and check if there are any back
+Yes! A small code change would work in this case. An if statement could be added to the code which would traverse through a line and check if there are any backticks in the line. Since we know a normal link would not every contain a backtick, we can make the code ignore it. This can be achieved in a variety of ways, one of them can be by reading a substring before and after the backtick, ignoring it. Another way can be by reading a string between parenthesis and writing a helper method to detele any backticks in a given substring. This would not require a very involved change and can be achieved by small code edits. 
 
 **Question 2**
 **Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.**
 
-
+No, a small code change would not suffice in this case. To account for nested loops, while traversing through a string we would need to account for the number of open brackets/ parenthesis and their corresponding closed brackets parenthesis. If one of them does not have a complete pair, we would have to account for that as well. Then we would use our normal method to read bewteen the inner most open and closed parenthesis to get the correct output. This is clearly a more involved change since it requires many new local variables, if statements and, potentially some helper methods for convenience. 
 
 **Question 3**
 **Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.**
 
-
-
+No, this would also require a more involved change. We can write a boolean helper method to see if for a given line we have all the open and closed parenthesis or not. Then in an if satement, we can include a possibility that the line does not contain all these open/closed brackets and parenthesis. This if statement would then append the current line with the next line so that the formatting is fixed. Then, we can just use our original method to read between the given symbols to extract the link. Since this involves multiple lines [inlculing a whole new helper method], this would be a more involved change. 
