@@ -93,6 +93,25 @@ Instead of printing `foo(and(bar))`, my output prints `foo(and(bar)`
 ![Image](test495.png)
 
 
+## POETENTIAL CHANGES 
+
+**Test file 41**
+
+![Image](CHANGE1.png)
+
+Instead of throwing the error messages in lines 30 and 31, I could just return `"[]"` instead. This would make my ouput match the output required by common mark. 
+
+**Test file 495**
+
+![Image](CHANGE2.png)
+
+The current expected input contains a set of nested parentheses. To fix this, another feild called `openParenthesisCounter` and `closeParenthesisCounter`could be added to line 19 and 20. This can then be used to keep track of all the possible parentheses in a link, and ensure that the current markdown parser reads the substrings between approprate indices.
+
+![Image](CHANGE1.png)
+
+In addition, a condition can be added to all of these if statements so that the statement does not execute immediately if there are multiple parentheses and accounts for the entire string before going in the if statement. 
 
 
-**For the implementation that’s not correct (or choose one if both are incorrect), describe the bug (the problem in the code) in about 2-3 sentences. You don’t have to provide a fix, but you should be specific about what is wrong with the program, and show the code that should be fixed (Provide a screenshot of code and highlight where the change needs to be made).**
+## CONCLUSION
+
+This concludes my 5th lab report! Thank you for reading! :) 
