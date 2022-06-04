@@ -13,6 +13,7 @@
 
 [Lab Report 4 - Week 8](https://charvishukla.github.io/cse15l-lab-reports/lab-report-4-week8.html)
 
+[Lab Report 5 - Week 10](https://charvishukla.github.io/cse15l-lab-reports/lab-report-5-week-10.html)
 
 
 [CSE 15L Website](https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/home)
