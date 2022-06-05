@@ -42,7 +42,7 @@ To find the different results, I did the following steps:
 > `test-files/41.md`
 
 Contents:
-![Image](test41contents.png)
+![Image](41_file.png)
 
 Test result: 
 ![Image](test41.png)
@@ -68,16 +68,16 @@ Test result:
 To get the correct expected output for parsing the contents of these given files, I will be using the [common mark website](https://spec.commonmark.org/dingus/)
 
 Expected output for `41.md`
-![Image](41_expected.png)
+![Image](41_expected_fix.png)
 
 Expected output for `495.md`
 ![Image](495_expected.png)
 
 **Test file 41**
 
-From analysing this we can see that the result for `41.md` should simply be `[]` since common mark does not recognize any of the inputs as Links.
+From analysing both the outputs we can see that both the implementations produce the wrong ouutput for this test case. Both implementations do not recognize the link. My implementation throws an error message saying that there is a missing bracket. 
 
-We can see that the given code produces the correct output, i.e. it results in empty brackets. On the other hand, simply returns a message indicating to the user that the input is incorrect. 
+On the other hand, the given implementation does not read any substring and just returns `[]`
 
 ![Image](test41.png)
 
@@ -97,9 +97,19 @@ Instead of printing `foo(and(bar))`, my output prints `foo(and(bar)`
 
 **Test file 41**
 
+_Change in my imlementation_
 ![Image](CHANGE1.png)
 
-Instead of throwing the error messages in lines 30 and 31, I could just return `"[]"` instead. This would make my ouput match the output required by common mark. 
+Since the input contains `" "` additional if statements could be added to my implementation to allow for additional symbols that might cause this problem. These include, but are not limited to, `" @ # $ % *` and so on. Since quotes come in pairs, a feild for `openQuote` and `closedQuote` can be made and a substring between that could be read.
+
+
+_Change in the given imlementation_
+
+we can see that since there is additional  text, `url`, we would want to ignore that and just read what is inside the quotations. This means that we would want to use the index of the quotes for reading the substring insead of using the parentheses. 
+
+![Image](given_implementation.png)
+
+To achieve this, we can add a feild for `openQuote`. If the index of `openQuote` is greater than the index of  `openParen` then we can just update `openParen` to be `openQuote`. The same thing, but vice versa, can be done for `closeParen` and `closeQuote` this would ensure that link `a` is read correctly. These changes can be implemented at the beginnning of the while loop shown above.
 
 **Test file 495**
 
